@@ -38,7 +38,7 @@ Callback functions are optional
       
 Fetch the current version of 'growlnotify':
 
-    growl.binVersion(function(version){ ... })
+    growl.binVersion(function(err, version){ ... })
     // => 'n.n.n'
 
 ## License 
