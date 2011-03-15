@@ -2,7 +2,7 @@
 var growl = require('./lib/growl')
 
 growl.binVersion(function(err, version){
-  require('sys').p(version)
+  console.log(version);
 })
 growl.notify('You have mail!')
 growl.notify('5 new messages', { sticky: true })
