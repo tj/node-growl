@@ -1,4 +1,10 @@
 
+1.1.0 / 2011-03-15 
+==================
+
+  * Added optional callbacks
+  * Added parsing of version
+
 1.0.1 / 2010-03-26
 ==================
 
