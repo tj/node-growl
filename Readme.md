@@ -1,14 +1,12 @@
-
 # Growl for nodejs
 
 Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](http://github.com/visionmedia/growl).
 
 ## Installation
 
-  Install the [Kiwi package manager for nodejs](http://github.com/visionmedia/kiwi)
-  and run:
+  Install [npm](http://npmjs.org/) and run:
   
-      $ kiwi -v install growl
+      $ npm -g install growl
 
 ## Examples
 
