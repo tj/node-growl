@@ -16,6 +16,7 @@ Callback functions are optional
     growl.notify('You have mail!')
     growl.notify('5 new messages', { sticky: true })
     growl.notify('5 new emails', { title: 'Email Client', image: 'Safari', sticky: true })
+    growl.notify('Set priority', { priority: 2 })
     growl.notify('Show Safari icon', { image: 'Safari' })
     growl.notify('Show icon', { image: 'path/to/icon.icns' })
     growl.notify('Show image', { image: 'path/to/my.image.png' })
@@ -31,6 +32,8 @@ Callback functions are optional
     - notification title
   - name
     - application name
+  - priority
+    - priority for the notification (default is 0)
   - sticky
     - weither or not the notification should remainin until closed
   - image
