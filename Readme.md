@@ -1,8 +1,20 @@
 # Growl for nodejs
 
-Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](http://github.com/visionmedia/growl).
+Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](http://github.com/visionmedia/growl).  Ubuntu/Linux support added thanks to [@niftylettuce](http://github.com/niftylettuce).
 
 ## Installation
+
+### Mac OS X (Darwin):
+
+  Install [npm](http://npmjs.org/) and run:
+  
+      $ npm -g install growl
+
+### Ubuntu (Linux):
+
+  Install `notify-send` through the [libnotify-bin](packages.ubuntu.com/libnotify-bin) package:
+
+      $ sudo apt-get install libnotify-bin
 
   Install [npm](http://npmjs.org/) and run:
   
@@ -16,6 +28,7 @@ Callback functions are optional
     growl.notify('You have mail!')
     growl.notify('5 new messages', { sticky: true })
     growl.notify('5 new emails', { title: 'Email Client', image: 'Safari', sticky: true })
+    growl.notify('Message with title', { title: 'Title'})
     growl.notify('Set priority', { priority: 2 })
     growl.notify('Show Safari icon', { image: 'Safari' })
     growl.notify('Show icon', { image: 'path/to/icon.icns' })
