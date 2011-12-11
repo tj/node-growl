@@ -8,7 +8,7 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
 
   Install [npm](http://npmjs.org/) and run:
   
-      $ npm -g install growl
+      $ npm install growl
 
 ### Ubuntu (Linux):
 
@@ -18,7 +18,7 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
 
   Install [npm](http://npmjs.org/) and run:
   
-      $ npm -g install growl
+      $ npm install growl
 
 ## Examples
 
