@@ -25,17 +25,17 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
 Callback functions are optional
 
     var growl = require('growl')
-    growl.notify('You have mail!')
-    growl.notify('5 new messages', { sticky: true })
-    growl.notify('5 new emails', { title: 'Email Client', image: 'Safari', sticky: true })
-    growl.notify('Message with title', { title: 'Title'})
-    growl.notify('Set priority', { priority: 2 })
-    growl.notify('Show Safari icon', { image: 'Safari' })
-    growl.notify('Show icon', { image: 'path/to/icon.icns' })
-    growl.notify('Show image', { image: 'path/to/my.image.png' })
-    growl.notify('Show png filesystem icon', { image: 'png' })
-    growl.notify('Show pdf filesystem icon', { image: 'article.pdf' })
-    growl.notify('Show pdf filesystem icon', { image: 'article.pdf' }, function(){
+    growl('You have mail!')
+    growl('5 new messages', { sticky: true })
+    growl('5 new emails', { title: 'Email Client', image: 'Safari', sticky: true })
+    growl('Message with title', { title: 'Title'})
+    growl('Set priority', { priority: 2 })
+    growl('Show Safari icon', { image: 'Safari' })
+    growl('Show icon', { image: 'path/to/icon.icns' })
+    growl('Show image', { image: 'path/to/my.image.png' })
+    growl('Show png filesystem icon', { image: 'png' })
+    growl('Show pdf filesystem icon', { image: 'article.pdf' })
+    growl('Show pdf filesystem icon', { image: 'article.pdf' }, function(err){
       // ... notified
     })
 
@@ -57,11 +57,6 @@ Callback functions are optional
       - filename uses extname as --icon
       - otherwise treated as --icon
       
-Fetch the current version of 'growlnotify':
-
-    growl.binVersion(function(err, version){ ... })
-    // => 'n.n.n'
-
 ## License 
 
 (The MIT License)
