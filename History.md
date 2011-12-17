@@ -1,4 +1,10 @@
 
+1.3.0 / 2011-12-17 
+==================
+
+  * Added support for Ubuntu/Debian/Linux users [niftylettuce]
+  * Fixed: send notifications even if title not specified [alessioalex]
+
 1.2.0 / 2011-10-06 
 ==================
 
