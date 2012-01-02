@@ -12,7 +12,7 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
 
 ### Ubuntu (Linux):
 
-  Install `notify-send` through the [libnotify-bin](packages.ubuntu.com/libnotify-bin) package:
+  Install `notify-send` through the [libnotify-bin](http://packages.ubuntu.com/libnotify-bin) package:
 
       $ sudo apt-get install libnotify-bin
 
