@@ -1,6 +1,6 @@
 # Growl for nodejs
 
-Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](http://github.com/visionmedia/growl).  Ubuntu/Linux support added thanks to [@niftylettuce](http://github.com/niftylettuce).
+Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](http://github.com/visionmedia/growl).  Ubuntu/Linux support added thanks to [@niftylettuce](http://github.com/niftylettuce). You'll need [growlnotify(1)](http://growl.info/extras.php#growlnotify).
 
 ## Installation
 
