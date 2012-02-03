@@ -20,6 +20,16 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
   
       $ npm install growl
 
+### Windows:
+
+  Download and install [Growl for Windows](http://www.growlforwindows.com/gfw/default.aspx)
+
+  Download [growlnotify](http://www.growlforwindows.com/gfw/help/growlnotify.aspx) - **IMPORTANT :** Unpack growlnotify to a folder that is present in your path!
+
+  Install [npm](http://npmjs.org/) and run:
+  
+      $ npm install growl
+
 ## Examples
 
 Callback functions are optional
