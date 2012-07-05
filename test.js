@@ -14,3 +14,4 @@ growl('Show pdf filesystem icon', { image: 'article.pdf' })
 growl('Show pdf filesystem icon', { image: 'article.pdf' }, function(){
   console.log('callback');
 })
+growl('Show pdf filesystem icon', { title: 'Use show()', image: 'article.pdf' })
