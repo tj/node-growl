@@ -8,8 +8,10 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
 
 ### Mac OS X (Darwin):
 
-  Install [growlnotify(1)](http://growl.info/extras.php#growlnotify).
-
+  Install [growlnotify(1)](http://growl.info/extras.php#growlnotify). On OS X 10.8, Notification Center is supported using [terminal-notifier](https://github.com/alloy/terminal-notifier). To install:
+  
+      $ sudo gem install terminal-notifier
+      
   Install [npm](http://npmjs.org/) and run:
   
       $ npm install growl
