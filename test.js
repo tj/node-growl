@@ -22,3 +22,4 @@ growl('here \' are \n some \\ characters that " need escaping', {}, function(err
 growl('Allow custom notifiers', { exec: 'echo %s' })
 growl('Allow custom notifiers', { title: 'test', exec: 'echo' })
 growl('Allow custom notifiers', { title: 'test', exec: 'echo %s' })
+growl('Open a URL', { url: 'https://npmjs.org/package/growl' });
