@@ -1,6 +1,7 @@
 
 var growl = require('./lib/growl')
 
+growl('Support sound notifications', {title: 'Make a sound', sound: 'purr'});
 growl('You have mail!')
 growl('5 new messages', { sticky: true })
 growl('5 new emails', { title: 'Email Client', image: 'Safari', sticky: true })
