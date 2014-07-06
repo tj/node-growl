@@ -6,6 +6,9 @@
   "maintainers": [
     "Joshua Appelman <joshua@jbnicolai.nl>"
   ],
-  "repository": "git://github.com/visionmedia/node-growl.git",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/visionmedia/node-growl.git"
+  },
   "main": "./lib/growl.js"
 }
