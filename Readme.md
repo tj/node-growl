@@ -72,6 +72,12 @@ Callback functions are optional
       - capitalized word sets --appIcon
       - filename uses extname as --icon
       - otherwise treated as --icon
+  - exec
+    - manually specify a shell command instead
+      - appends message to end of shell command
+      - or, replaces `%s` with message
+      - optionally prepends title (example: `title: message`)
+      - examples: `{exec: 'tmux display-message'}`, `{exec: 'echo "%s" > messages.log}`
       
 ## License 
 
