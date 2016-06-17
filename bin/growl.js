@@ -23,6 +23,5 @@ function notify(message) {
   ['title', 'app', 'sticky', 'image', 'priority', 'exec'].forEach(function (option) {
     if (program[option]) options[option] = program[option];
   });
-  console.log(options, message);
   growl(message, options);
 }
