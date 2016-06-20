@@ -3,7 +3,7 @@
 var growl = require('../lib/growl')
   , program = require('commander')
   , pkg = require('../package.json')
-  , NEW_LINE = '\n\t\t\t\t';
+  , NEW_LINE = '\n                          ';
 
 program
   .version(pkg.version)
@@ -22,11 +22,11 @@ program
   .option(
     '-i --image <image>',
     'Auto-detects the context:' + NEW_LINE +
-    'path to an icon sets --iconpath' + NEW_LINE +
-    'path to an image sets --image' + NEW_LINE +
-    'capitalized word sets --appIcon' + NEW_LINE +
-    'filename uses extname as --icon' + NEW_LINE +
-    'otherwise treated as --icon'
+    '- path to an icon sets --iconpath' + NEW_LINE +
+    '- path to an image sets --image' + NEW_LINE +
+    '- capitalized word sets --appIcon' + NEW_LINE +
+    '- filename uses extname as --icon' + NEW_LINE +
+    '- otherwise treated as --icon'
   )
   .option(
     '-p --priority <priority>',
@@ -34,11 +34,11 @@ program
   )
   .option(
     '-e --exec <command>',
-    'manually specify a shell command instead' + NEW_LINE +
-    'appends message to end of shell command' + NEW_LINE +
-    'or, replaces %s with message' + NEW_LINE +
-    'optionally prepends title (example: title: message)' + NEW_LINE +
-    'examples: --exec "tmux display-message" --exec "echo \'%s\' > messages.log"'
+    'Manually specify a shell command instead' + NEW_LINE +
+    '- appends message to end of shell command' + NEW_LINE +
+    '- or, replaces %s with message' + NEW_LINE +
+    '- optionally prepends title (example: title: message)' + NEW_LINE +
+    '- examples: --exec "tmux display-message" --exec "echo \'%s\' > messages.log"'
   )
   .arguments('<message>')
   .action(notify)
