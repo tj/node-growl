@@ -47,9 +47,9 @@ program
 if (program.args.length < 1) program.help();
 
 function notify(message) {
-  var keys = ['title', 'app', 'sticky', 'image', 'priority', 'exec'];
-  var options = keys.reduce(function (options, option) {
-    if (program[option]) options[option] = program[option];
+  var options = program.options.reduce(function (options, option) {
+    var name = option.name();
+    if (program[name]) options[name] = program[name];
     return options;
   }, {});
   growl(message, options);
