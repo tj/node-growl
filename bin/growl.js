@@ -2,16 +2,44 @@
 
 var growl = require('../lib/growl')
   , program = require('commander')
-  , pkg = require('../package.json');
+  , pkg = require('../package.json')
+  , NEW_LINE = '\n\t\t\t\t';
 
 program
   .version(pkg.version)
-  .option('-t --title <title>', 'Notifcation title')
-  .option('-a --app <name>', 'Application name')
-  .option('-s --sticky', 'Whether or not the notication should remain until closed')
-  .option('-i --image <image>', 'Auto-detects the context:\n\t\t\tpath to an icon sets --iconpath\n\t\t\tpath to an image sets --image\n\t\t\tcapitalized word sets --appIcon\n\t\t\tfilename uses extname as --icon\n\t\t\totherwise treated as --icon')
-  .option('-p --priority <priority>', 'Priority for the notification (default is 0)')
-  .option('-e --exec <command>', 'manually specify a shell command instead\n\t\t\tappends message to end of shell command\n\t\t\tor, replaces %s with message\n\t\t\toptionally prepends title (example: title: message)\n\t\t\texamples: --exec "tmux display-message" --exec "echo \'%s\' > messages.log"')
+  .option(
+    '-t --title <title>',
+    'Notifcation title'
+  )
+  .option(
+    '-a --app <name>',
+    'Application name'
+  )
+  .option(
+    '-s --sticky',
+    'Whether or not the notication should remain until closed'
+  )
+  .option(
+    '-i --image <image>',
+    'Auto-detects the context:' + NEW_LINE +
+    'path to an icon sets --iconpath' + NEW_LINE +
+    'path to an image sets --image' + NEW_LINE +
+    'capitalized word sets --appIcon' + NEW_LINE +
+    'filename uses extname as --icon' + NEW_LINE +
+    'otherwise treated as --icon'
+  )
+  .option(
+    '-p --priority <priority>',
+    'Priority for the notification (default is 0)'
+  )
+  .option(
+    '-e --exec <command>',
+    'manually specify a shell command instead' + NEW_LINE +
+    'appends message to end of shell command' + NEW_LINE +
+    'or, replaces %s with message' + NEW_LINE +
+    'optionally prepends title (example: title: message)' + NEW_LINE +
+    'examples: --exec "tmux display-message" --exec "echo \'%s\' > messages.log"'
+  )
   .arguments('<message>')
   .action(notify)
   .parse(process.argv);
@@ -19,9 +47,10 @@ program
 if (program.args.length < 1) program.help();
 
 function notify(message) {
-  var options = {};
-  ['title', 'app', 'sticky', 'image', 'priority', 'exec'].forEach(function (option) {
+  var keys = ['title', 'app', 'sticky', 'image', 'priority', 'exec'];
+  var options = keys.reduce(function (options, option) {
     if (program[option]) options[option] = program[option];
-  });
+    return options;
+  }, {});
   growl(message, options);
 }
