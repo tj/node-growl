@@ -7,39 +7,25 @@ var growl = require('../lib/growl')
 
 program
   .version(pkg.version)
-  .option(
-    '-t --title <title>',
-    'Notifcation title'
-  )
-  .option(
-    '-a --app <name>',
-    'Application name'
-  )
-  .option(
-    '-s --sticky',
-    'Whether or not the notication should remain until closed'
-  )
-  .option(
-    '-i --image <image>',
-    'Auto-detects the context:' + NEW_LINE +
-    '- path to an icon sets --iconpath' + NEW_LINE +
-    '- path to an image sets --image' + NEW_LINE +
-    '- capitalized word sets --appIcon' + NEW_LINE +
-    '- filename uses extname as --icon' + NEW_LINE +
-    '- otherwise treated as --icon'
-  )
-  .option(
-    '-p --priority <priority>',
-    'Priority for the notification (default is 0)'
-  )
-  .option(
-    '-e --exec <command>',
-    'Manually specify a shell command instead' + NEW_LINE +
-    '- appends message to end of shell command' + NEW_LINE +
-    '- or, replaces %s with message' + NEW_LINE +
-    '- optionally prepends title (example: title: message)' + NEW_LINE +
-    '- examples: --exec "tmux display-message" --exec "echo \'%s\' > messages.log"'
-  )
+  .option('-t --title <title>', 'Notifcation title')
+  .option('-a --app <name>', 'Application name')
+  .option('-s --sticky', 'Whether or not the notication should remain until closed')
+  .option('-i --image <image>', lines(
+      'Auto-detects the context:'
+    , '- path to an icon sets --iconpath'
+    , '- path to an image sets --image'
+    , '- capitalized word sets --appIcon'
+    , '- filename uses extname as --icon'
+    , '- otherwise treated as --icon'
+  ))
+  .option('-p --priority <priority>', 'Priority for the notification (default is 0)')
+  .option('-e --exec <command>', lines(
+      'Manually specify a shell command instead'
+    , '- appends message to end of shell command'
+    , '- or, replaces %s with message'
+    , '- optionally prepends title (example: title: message)'
+    , '- examples: --exec "tmux display-message" --exec "echo \'%s\' > messages.log"'
+  ))
   .arguments('<message>')
   .action(notify)
   .parse(process.argv);
@@ -53,4 +39,8 @@ function notify(message) {
     return options;
   }, {});
   growl(message, options);
+}
+
+function lines() {
+  return Array.prototype.join.call(arguments, NEW_LINE);
 }
