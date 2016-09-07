@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git://github.com/tj/node-growl.git"
   },
-  "dependencies": {
-    "shell-escape": ">=0.2.0"
-  },
   "main": "./lib/growl.js",
   "license": "MIT"
 }
