@@ -12,5 +12,11 @@
     "url": "git://github.com/tj/node-growl.git"
   },
   "main": "./lib/growl.js",
-  "license": "MIT"
+  "bin": {
+    "growl": "./bin/growl.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }
