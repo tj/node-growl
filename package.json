@@ -4,7 +4,8 @@
   "description": "Growl unobtrusive notifications",
   "author": "TJ Holowaychuk <tj@vision-media.ca>",
   "maintainers": [
-    "Joshua Boy Nicolai Appelman <joshua@jbnicolai.nl>"
+    "Joshua Boy Nicolai Appelman <joshua@jbnicolai.nl>",
+    "Timo Sand <timo.sand@iki.fi>"
   ],
   "repository": {
     "type": "git",
