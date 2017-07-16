@@ -11,8 +11,8 @@ node_js:
 - 'node'
 before_install:
   - npm i -g npm@latest
-  - sudo apt-get -qq update
-  - sudo apt-get install -y libnotify-bin
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y libnotify-bin; fi
 jobs:
   include:
     - stage: lint
