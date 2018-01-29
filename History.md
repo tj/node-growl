@@ -1,3 +1,7 @@
+1.10.4 / 2018-01-29
+==================
+
+* Fix notifications on linux when using notify-send (#70) [hmshwt]
 
 1.9.3 / 2016-09-05
 ==================
