@@ -76,7 +76,7 @@ growl('Show pdf filesystem icon', { image: 'article.pdf' }, function(err){
   - `priority`
     - priority for the notification (default is `0`)
   - `sticky`
-    - weither or not the notification should remainin until closed
+    - whether or not the notification should remain until closed
   - `image`
     - Auto-detects the context:
       - path to an icon sets `--iconpath`
