@@ -11,7 +11,7 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
 
     $ sudo gem install terminal-notifier
 
-  Install [npm](http://npmjs.org/) and run:
+  Install [npm][] and run:
 
     $ npm install growl
 
@@ -21,7 +21,7 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
 
     $ sudo apt-get install libnotify-bin
 
-  Install [npm](http://npmjs.org/) and run:
+  Install [npm][] and run:
 
     $ npm install growl
 
@@ -31,9 +31,11 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
 
   Download [growlnotify](http://www.growlforwindows.com/gfw/help/growlnotify.aspx) - **IMPORTANT :** Unpack growlnotify to a folder that is present in your path!
 
-  Install [npm](http://npmjs.org/) and run:
+  Install [npm][] and run:
 
     $ npm install growl
+
+[npm]: http://npmjs.org
 
 ## Examples
 
