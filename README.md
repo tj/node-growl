@@ -83,7 +83,7 @@ growl('Show pdf filesystem icon', { image: 'article.pdf' }, function(err){
       - path to an image sets `--image`
       - capitalized word sets `--appIcon`
       - filename uses extname as `--icon`
-      - otherwise treated as `--icon`
+      - otherwise, treated as `--icon`
   - `exec`
     - manually specify a shell command instead
       - appends message to end of shell command
