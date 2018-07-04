@@ -5,37 +5,46 @@ Growl support for Nodejs. This is essentially a port of my [Ruby Growl Library](
 
 ## Installation
 
-### Install
+### Mac OS X (Darwin)
 
-### Mac OS X (Darwin):
-
-  Install [growlnotify(1)](http://growl.info/extras.php#growlnotify). On OS X 10.8, Notification Center is supported using [terminal-notifier](https://github.com/alloy/terminal-notifier). To install:
+  Install [growlnotify(1)](http://growl.info/extras.php#growlnotify). 
+  On OS X 10.8, Notification Center is supported using [terminal-notifier](https://github.com/alloy/terminal-notifier). 
+  
+  To install:
 
     $ sudo gem install terminal-notifier
 
-  Install [npm](http://npmjs.org/) and run:
+  Install [npm][] and run:
 
     $ npm install growl
 
-### Ubuntu (Linux):
+### Ubuntu (Linux)
 
   Install `notify-send` through the [libnotify-bin](http://packages.ubuntu.com/libnotify-bin) package:
 
     $ sudo apt-get install libnotify-bin
 
-  Install [npm](http://npmjs.org/) and run:
+  Install [npm][] and run:
 
     $ npm install growl
 
-### Windows:
+### Windows
 
   Download and install [Growl for Windows](http://www.growlforwindows.com/gfw/default.aspx)
 
-  Download [growlnotify](http://www.growlforwindows.com/gfw/help/growlnotify.aspx) - **IMPORTANT :** Unpack growlnotify to a folder that is present in your path!
-
-  Install [npm](http://npmjs.org/) and run:
+  Download [growlnotify](http://www.growlforwindows.com/gfw/help/growlnotify.aspx) 
+  
+  ---
+  
+  **IMPORTANT:** Unpack growlnotify to a folder that is present in your path!
+  
+  ---
+  
+  Install [npm][] and run:
 
     $ npm install growl
+
+[npm]: http://npmjs.org
 
 ## Examples
 
@@ -60,22 +69,22 @@ growl('Show pdf filesystem icon', { image: 'article.pdf' }, function(err){
 
 ## Options
 
-  - title
+  - `title`
     - notification title
-  - name
+  - `name`
     - application name
-  - priority
-    - priority for the notification (default is 0)
-  - sticky
-    - weither or not the notification should remainin until closed
-  - image
+  - `priority`
+    - priority for the notification (default is `0`)
+  - `sticky`
+    - whether or not the notification should remain until closed
+  - `image`
     - Auto-detects the context:
-      - path to an icon sets --iconpath
-      - path to an image sets --image
-      - capitalized word sets --appIcon
-      - filename uses extname as --icon
-      - otherwise treated as --icon
-  - exec
+      - path to an icon sets `--iconpath`
+      - path to an image sets `--image`
+      - capitalized word sets `--appIcon`
+      - filename uses extname as `--icon`
+      - otherwise, treated as `--icon`
+  - `exec`
     - manually specify a shell command instead
       - appends message to end of shell command
       - or, replaces `%s` with message
