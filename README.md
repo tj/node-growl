@@ -69,22 +69,22 @@ growl('Show pdf filesystem icon', { image: 'article.pdf' }, function(err){
 
 ## Options
 
-  - title
+  - `title`
     - notification title
-  - name
+  - `name`
     - application name
-  - priority
-    - priority for the notification (default is 0)
-  - sticky
+  - `priority`
+    - priority for the notification (default is `0`)
+  - `sticky`
     - weither or not the notification should remainin until closed
-  - image
+  - `image`
     - Auto-detects the context:
-      - path to an icon sets --iconpath
-      - path to an image sets --image
-      - capitalized word sets --appIcon
-      - filename uses extname as --icon
-      - otherwise treated as --icon
-  - exec
+      - path to an icon sets `--iconpath`
+      - path to an image sets `--image`
+      - capitalized word sets `--appIcon`
+      - filename uses extname as `--icon`
+      - otherwise treated as `--icon`
+  - `exec`
     - manually specify a shell command instead
       - appends message to end of shell command
       - or, replaces `%s` with message
