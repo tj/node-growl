@@ -4,10 +4,11 @@ os:
   - linux
   - osx
 node_js:
-- '6'
-- '8'
-- 'lts/*'
-- 'node'
+  - "4"
+  - "6"
+  - "8"
+  - "lts/*"
+  - "node"
 before_install:
   - npm i -g npm@latest
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update; fi
