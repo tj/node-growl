@@ -21,7 +21,8 @@
   },
   "scripts": {
     "test": "node test.js",
-    "lint": "eslint --ext js lib "
+    "lint": "eslint --ext js lib ",
+    "dev": "nodemon test.js"
   },
   "engines": {
     "node": ">=4.x"
