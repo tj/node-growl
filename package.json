@@ -14,16 +14,19 @@
   "main": "./lib/growl.js",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.8.0",
-    "eslint-config-airbnb-base": "^12.0.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0"
+    "eslint": "<6",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "<9",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
   },
   "scripts": {
     "test": "node test.js",
     "lint": "eslint --ext js lib "
   },
   "engines": {
-    "node": ">=4.x"
+    "node": ">=6.x"
   }
 }

@@ -1,14 +1,18 @@
 {
-    "extends": ["airbnb-base", "eslint:recommended", "plugin:node/recommended"],
-    "plugins": [
-        "import",
-        "node"
-    ],
-    "rules": {
-      "no-console": ["error", { "allow": ["warn", "error"] }]
-    },
-    "env": {
-        "node": true,
-        "es6": true
-    }
+  "extends": ["airbnb-base", "eslint:recommended", "plugin:node/recommended", "prettier"],
+  "plugins": [
+    "import",
+    "node",
+    "prettier"
+  ],
+  "rules": {
+    "no-console": ["error", {
+      "allow": ["warn", "error"]
+    }],
+    "prettier/prettier": "error"
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  }
 }
